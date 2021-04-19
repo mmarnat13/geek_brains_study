@@ -1,0 +1,63 @@
+1 Задание:
+
+x = 1
+y = 2
+print("Переменные x и y - ", x, y)
+string1 = input("Введите первую строку ")
+number1 = int(input("Введите первое число "))
+string2 = input("Введите вторую строку ")
+number2 = int(input("Введите второе число "))
+print("Введеные значения - %10s %5d %10s %5d" % (string1, number1, string2, number2))
+
+2 Задание:
+
+input_in_sec = int(input("Введите время в секундах "))
+hours = input_in_sec // 3600
+minutes = (input_in_sec - hours * 3600) // 60
+seconds = input_in_sec - (hours * 3600 + minutes * 60)
+print(f"Время в формате чч:мм:сс   {hours} : {minutes} : {seconds}")
+
+3 Задание:
+
+n = int(input("Введите число - "))
+summ = (n + int(str(n) + str(n)) + int(str(n) + str(n)+ str(n)))
+print("Сумма чисел n + nn + nnn - %d" % summ)
+
+4 Задание:
+
+x = abs(int(input("Введите целое положительное число ")))
+max = x % 10
+while x >= 1:
+    x = x // 10
+    if x % 10 > max:
+        max = x % 10
+    if x > 9:
+        continue
+    else:
+        print("Максимальное цифра в числе ", max)
+        break
+        
+5 Задание:
+
+profit = float(input("Введите выручку фирмы "))
+costs = float(input("Введите издержки фирмы "))
+if profit > costs:
+    print(f"Фирма прибыльна. Рентабельность выручки составила {profit / costs:.2f}")
+    workers = int(input("Введите количество сотрудников фирмы "))
+    print(f"прибыль в расчете на одного сторудника сотавила {profit / workers:.2f}")
+elif profit == costs:
+    print("Фирма работает в ноль")
+else:
+    print("Фирма работает в убыток")
+    
+6 Задание:
+
+a = int(input("Введите результаты пробежки первого дня в км "))
+b = int(input("Введите общий желаемый результат в км "))
+result_days = 1
+result_km = a
+while result_km < b:
+        a = a + 0.1 * a
+        result_days += 1
+        result_km = result_km + a
+print(f"Вы достигнете требуемых показателей на %.d день" % result_days)
